@@ -4,19 +4,22 @@ metadata:
   name: todo-app
   labels:
     app: nginx
+
 spec:
   replicas: 3
+
   selector:
     matchLabels:
       app: nginx
+
   template:
     metadata:
       labels:
         app: nginx
+
     spec:
       containers:
-      - name: todo
-        image: image: nagendrababumadaka/cicd-e2e:5
-        ports:
-        - containerPort: 8000
-
+        - name: todo
+          image: nagendrababumadaka/cicd-e2e:5
+          ports:
+            - containerPort: 8000
